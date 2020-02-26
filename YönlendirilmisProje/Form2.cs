@@ -7,52 +7,85 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SQLite;
 
 namespace YönlendirilmisProje
 {
     public partial class Form2 : Form
     {
+        
+
         String kullaniciAdi;
         String sifre;
         String sifreTk;
-        String Admin;
+        Boolean Admin;
         public Form2()
         {
             InitializeComponent();
 
         }
 
-        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        private void adminRadio_CheckedChanged(object sender, EventArgs e)
         {
-            Admin = "True";
+            //Kullanıcıdan admin bilgisi alma 
+            Admin = true;
         }
 
-        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        private void kullaniciRadio_CheckedChanged(object sender, EventArgs e)
         {
-            Admin = "False";
+            //Kullanıcıdan admin bilgisi alma 
+            Admin = false;
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-           
-            kullaniciAdi = textBox1.Text;
-            sifre = textBox2.Text;
-            sifreTk = textBox3.Text;
 
-            if (kullaniciAdi.Length < 5)
+        private void KayıtOl_Click(object sender, EventArgs e)
+        {
+
+            //Formda girilen verileri çekme
+            kullaniciAdi = kullaniciAd.Text;
+            sifre = kullaniciSifre.Text;
+            sifreTk = sifreTekrar.Text;
+            //Kullanıcı adı şifre uygunluk ve eşleşme kontrolu
+            if (kullaniciAdi.Length < 6 && kullaniciAdi !="")
             {
-                System.Windows.Forms.MessageBox.Show("Kullanıcı adı 5 harften kısa olamaz");
-            }else if(sifre != sifreTk){
+                System.Windows.Forms.MessageBox.Show("Kullanıcı adı 6 harften kısa olamaz veya boş bırakılamaz");
+            }
+            else if (sifre != sifreTk)
+            {
                 System.Windows.Forms.MessageBox.Show("Sifreler eşleşmiyor");
             }
             else
             {
+                //SQL bağlantısı
+                string yol = "Data Source=veri.s3db;Version=3;";
+                SQLiteConnection baglanti = new SQLiteConnection(yol);
+                baglanti.Open();
+                string sql = "insert into kullanici(kullaniciAdi,sifre,kayitTarih,admin) values(@kullaniciAdi,@sifre,@kayitTarih,@admin)";
+                SQLiteCommand komut = new SQLiteCommand(sql, baglanti);
+                komut.Parameters.AddWithValue("@kullaniciAdi", kullaniciAd.Text);
+                komut.Parameters.AddWithValue("@sifre", kullaniciSifre.Text);
+
+                DateTime kayıtTarih = DateTime.Now;
+                komut.Parameters.AddWithValue("@kayitTarih", kayıtTarih);
+
+                komut.Parameters.AddWithValue("@admin", Admin);
+
+                //SQL bağlantısı sonlandırma 
+                komut.ExecuteNonQuery();
+                baglanti.Dispose();
+                komut.Dispose();
+
+
+                MessageBox.Show("Kayıt işleminiz tamamlandı");
+                //Giriş sayfasına yönlendirme 
                 this.Hide();
                 Form1 f1 = new Form1();
                 f1.ShowDialog();
+
             }
 
-           
         }
+
+     
     }
 }
