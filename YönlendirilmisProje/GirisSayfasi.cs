@@ -11,11 +11,11 @@ using System.Data.SQLite;
 
 namespace YönlendirilmisProje
 {
-    public partial class Form1 : Form
+    public partial class GirisSayfasi : Form
     {
         String kullaniciAdi;
         String sifre;
-        public Form1()
+        public GirisSayfasi()
         {
             InitializeComponent();
         }
@@ -45,7 +45,7 @@ namespace YönlendirilmisProje
                 
                 {
                     this.Hide();
-                    Form2 f2 = new Form2();
+                    KayitSayfasi f2 = new KayitSayfasi();
 
                     f2.ShowDialog();
                     

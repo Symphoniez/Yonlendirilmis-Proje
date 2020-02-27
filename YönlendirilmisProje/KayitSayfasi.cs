@@ -11,7 +11,7 @@ using System.Data.SQLite;
 
 namespace YönlendirilmisProje
 {
-    public partial class Form2 : Form
+    public partial class KayitSayfasi : Form
     {
         
 
@@ -19,7 +19,7 @@ namespace YönlendirilmisProje
         String sifre;
         String sifreTk;
         Boolean Admin;
-        public Form2()
+        public KayitSayfasi()
         {
             InitializeComponent();
 
@@ -79,7 +79,7 @@ namespace YönlendirilmisProje
                 MessageBox.Show("Kayıt işleminiz tamamlandı");
                 //Giriş sayfasına yönlendirme 
                 this.Hide();
-                Form1 f1 = new Form1();
+                GirisSayfasi f1 = new GirisSayfasi();
                 f1.ShowDialog();
 
             }

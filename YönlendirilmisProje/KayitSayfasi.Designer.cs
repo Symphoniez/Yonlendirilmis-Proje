@@ -1,6 +1,6 @@
 ﻿namespace YönlendirilmisProje
 {
-    partial class Form2
+    partial class KayitSayfasi
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(KayitSayfasi));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.kullaniciRadio = new System.Windows.Forms.RadioButton();
             this.adminRadio = new System.Windows.Forms.RadioButton();
