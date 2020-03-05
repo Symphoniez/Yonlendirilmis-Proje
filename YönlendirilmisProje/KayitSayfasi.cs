@@ -13,22 +13,18 @@ namespace YönlendirilmisProje
 {
     public partial class KayitSayfasi : Form
     {
-        
-
-        String kullaniciAdi;
-        String sifre;
-        String sifreTk;
-        Boolean Admin;
         public KayitSayfasi()
         {
+           
+           
             InitializeComponent();
-
         }
-
+        
+        Boolean Admin;
         private void adminRadio_CheckedChanged(object sender, EventArgs e)
         {
             //Kullanıcıdan admin bilgisi alma 
-            Admin = true;
+            this.Admin = true;
         }
 
         private void kullaniciRadio_CheckedChanged(object sender, EventArgs e)
@@ -37,16 +33,14 @@ namespace YönlendirilmisProje
             Admin = false;
         }
 
-
-        private void KayıtOl_Click(object sender, EventArgs e)
+        private void kayıtOl_Click(object sender, EventArgs e)
         {
-
             //Formda girilen verileri çekme
-            kullaniciAdi = kullaniciAd.Text;
-            sifre = kullaniciSifre.Text;
-            sifreTk = sifreTekrar.Text;
+           string kullaniciAdi = kullaniciAd.Text;
+            string sifre = kullaniciSifre.Text;
+            string sifreTk = sifreTekrar.Text;
             //Kullanıcı adı şifre uygunluk ve eşleşme kontrolu
-            if (kullaniciAdi.Length < 6 && kullaniciAdi !="")
+            if (kullaniciAdi.Length < 6 && kullaniciAdi != "")
             {
                 System.Windows.Forms.MessageBox.Show("Kullanıcı adı 6 harften kısa olamaz veya boş bırakılamaz");
             }
@@ -83,9 +77,6 @@ namespace YönlendirilmisProje
                 f1.ShowDialog();
 
             }
-
         }
-
-     
     }
 }

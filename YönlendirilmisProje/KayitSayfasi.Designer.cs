@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(KayitSayfasi));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.kullaniciRadio = new System.Windows.Forms.RadioButton();
             this.adminRadio = new System.Windows.Forms.RadioButton();
@@ -53,10 +52,10 @@
             this.groupBox1.Controls.Add(this.kayıtOl);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(239, 73);
+            this.groupBox1.Location = new System.Drawing.Point(239, 87);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(323, 277);
-            this.groupBox1.TabIndex = 1;
+            this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             // 
             // kullaniciRadio
@@ -80,7 +79,6 @@
             this.adminRadio.TabIndex = 8;
             this.adminRadio.Text = "Admin";
             this.adminRadio.UseVisualStyleBackColor = true;
-            this.adminRadio.CheckedChanged += new System.EventHandler(this.adminRadio_CheckedChanged);
             // 
             // sifreTekrar
             // 
@@ -120,7 +118,7 @@
             this.kayıtOl.TabIndex = 2;
             this.kayıtOl.Text = "Kayıt";
             this.kayıtOl.UseVisualStyleBackColor = true;
-            this.kayıtOl.Click += new System.EventHandler(this.KayıtOl_Click);
+            this.kayıtOl.Click += new System.EventHandler(this.kayıtOl_Click);
             // 
             // label2
             // 
@@ -140,18 +138,14 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Kullanıcı Adı";
             // 
-            // Form2
+            // KayitSayfasi
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.AutoSize = true;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.groupBox1);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "Form2";
-            this.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Kayıt";
+            this.Name = "KayitSayfasi";
+            this.Text = "Kayit";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -161,14 +155,14 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.RadioButton kullaniciRadio;
+        private System.Windows.Forms.RadioButton adminRadio;
+        private System.Windows.Forms.TextBox sifreTekrar;
+        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox kullaniciSifre;
         private System.Windows.Forms.TextBox kullaniciAd;
         private System.Windows.Forms.Button kayıtOl;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox sifreTekrar;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.RadioButton kullaniciRadio;
-        private System.Windows.Forms.RadioButton adminRadio;
     }
 }
