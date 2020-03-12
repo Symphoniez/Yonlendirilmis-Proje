@@ -10,13 +10,16 @@ using System.Windows.Forms;
 
 namespace YönlendirilmisProje
 {
-    public partial class adminAnaSayfa : Form
+    public partial class Anasayfacs : Form
     {
-        public adminAnaSayfa()
+        public Anasayfacs()
         {
             InitializeComponent();
         }
 
-     
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

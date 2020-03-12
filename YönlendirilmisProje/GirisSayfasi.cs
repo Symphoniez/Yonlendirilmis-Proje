@@ -52,29 +52,30 @@ namespace YönlendirilmisProje
             {
                 string row = String.Format("Id: {0} kullaniciAdi: {1} sifre : {2} kayitTarih: {3}  Admin: {4}", item[0], item[1], item[2], item[3], item[4]);
 
-                if (item[1].Equals(kullaniciAdi))
+                if (item[1].Equals(kullaniciAdi) && item[2].Equals(sifre))
                 {
                     //kullanici adı doğruluk kontrolu
-                    if (item[2].Equals(sifre))
-                    {
-                        //sifre doğruluk kontrolu
                         if (item[4] is true)
                         { 
                             //admin anasayfa yönlendirme
                             this.Hide();
                             adminAnaSayfa f3 = new adminAnaSayfa();
                             f3.ShowDialog();
+                        break;
 
                         }
                         else
                         {
-                            MessageBox.Show("Şifreniz yanlış");
+                            this.Hide();
+                            Anasayfacs f4 = new Anasayfacs();
+                            f4.ShowDialog();
+                        break;
                         }
                     }
-                    else
-                    {
-                        MessageBox.Show("Kullanıcı adınız yanlış");
-                    }
+                else
+                {
+                    MessageBox.Show("Kullanıcı adınız veya şifreniz yanlış");
+                    break;
                 }
             }
         }

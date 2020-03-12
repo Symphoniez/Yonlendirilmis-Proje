@@ -71,6 +71,12 @@
     <Compile Include="adminAnaSayfa.Designer.cs">
       <DependentUpon>adminAnaSayfa.cs</DependentUpon>
     </Compile>
+    <Compile Include="Anasayfacs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Anasayfacs.Designer.cs">
+      <DependentUpon>Anasayfacs.cs</DependentUpon>
+    </Compile>
     <Compile Include="GirisSayfasi.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -85,6 +91,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="adminAnaSayfa.resx">
+      <DependentUpon>adminAnaSayfa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Anasayfacs.resx">
+      <DependentUpon>Anasayfacs.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GirisSayfasi.resx">
       <DependentUpon>GirisSayfasi.cs</DependentUpon>
     </EmbeddedResource>

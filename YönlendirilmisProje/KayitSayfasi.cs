@@ -40,7 +40,7 @@ namespace YönlendirilmisProje
             string sifre = kullaniciSifre.Text;
             string sifreTk = sifreTekrar.Text;
             //Kullanıcı adı şifre uygunluk ve eşleşme kontrolu
-            if (kullaniciAdi.Length < 6 && kullaniciAdi != "")
+            if (kullaniciAdi.Length < 6 && kullaniciAdi == "")
             {
                 System.Windows.Forms.MessageBox.Show("Kullanıcı adı 6 harften kısa olamaz veya boş bırakılamaz");
             }
