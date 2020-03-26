@@ -20,23 +20,26 @@ namespace YönlendirilmisProje
             InitializeComponent();
         }
         
-        Boolean Admin;
-        private void adminRadio_CheckedChanged(object sender, EventArgs e)
+        Boolean Admin=false;
+  
+        private void adminRadio_Click(object sender, EventArgs e)
         {
             //Kullanıcıdan admin bilgisi alma 
             this.Admin = true;
+          
         }
-
-        private void kullaniciRadio_CheckedChanged(object sender, EventArgs e)
+        private void kullaniciRadio_Click(object sender, EventArgs e)
         {
             //Kullanıcıdan admin bilgisi alma 
-            Admin = false;
+            this.Admin = false;
+       
         }
+
 
         private void kayıtOl_Click(object sender, EventArgs e)
         {
             //Formda girilen verileri çekme
-           string kullaniciAdi = kullaniciAd.Text;
+            string kullaniciAdi = kullaniciAd.Text;
             string sifre = kullaniciSifre.Text;
             string sifreTk = sifreTekrar.Text;
             //Kullanıcı adı şifre uygunluk ve eşleşme kontrolu
@@ -51,7 +54,7 @@ namespace YönlendirilmisProje
             else
             {
                 //SQL bağlantısı
-                string yol = "Data Source=veri.s3db;Version=3;";
+                string yol = "Data Source=verit.s3db;Version=3;";
                 SQLiteConnection baglanti = new SQLiteConnection(yol);
                 baglanti.Open();
                 string sql = "insert into kullanici(kullaniciAdi,sifre,kayitTarih,admin) values(@kullaniciAdi,@sifre,@kayitTarih,@admin)";
@@ -78,5 +81,7 @@ namespace YönlendirilmisProje
 
             }
         }
+
+     
     }
 }

@@ -69,6 +69,7 @@
             this.kullaniciRadio.TabStop = true;
             this.kullaniciRadio.Text = "Kullanıcı";
             this.kullaniciRadio.UseVisualStyleBackColor = true;
+            this.kullaniciRadio.Click += new System.EventHandler(this.kullaniciRadio_Click);
             // 
             // adminRadio
             // 
@@ -79,6 +80,7 @@
             this.adminRadio.TabIndex = 8;
             this.adminRadio.Text = "Admin";
             this.adminRadio.UseVisualStyleBackColor = true;
+            this.adminRadio.Click += new System.EventHandler(this.adminRadio_Click);
             // 
             // sifreTekrar
             // 

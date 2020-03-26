@@ -10,17 +10,22 @@ using System.Windows.Forms;
 
 namespace YönlendirilmisProje
 {
-    public partial class adminAnaSayfa : Form
+    public partial class malz_ekle : Form
     {
-        public adminAnaSayfa()
+        public malz_ekle()
         {
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void ekle_vazgec_Click(object sender, EventArgs e)
         {
-            malz_ekle ekle = new malz_ekle();
-            ekle.ShowDialog();
+            this.Hide();
+        }
+
+        private void e_ekle_Click(object sender, EventArgs e)
+        {
+
         }
     }
+
 }
