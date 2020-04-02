@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.kategori = new System.Windows.Forms.TextBox();
+            this.malz_Ekle_Kategori = new System.Windows.Forms.TextBox();
             this.malz_adi = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.malz_Ekle_ismi = new System.Windows.Forms.TextBox();
             this.malz_adet = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.malz_Ekle_Adet = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.e_ekle = new System.Windows.Forms.Button();
             this.ekle_vazgec = new System.Windows.Forms.Button();
@@ -49,12 +49,12 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Kategori";
             // 
-            // kategori
+            // malz_Ekle_Kategori
             // 
-            this.kategori.Location = new System.Drawing.Point(38, 59);
-            this.kategori.Name = "kategori";
-            this.kategori.Size = new System.Drawing.Size(140, 22);
-            this.kategori.TabIndex = 1;
+            this.malz_Ekle_Kategori.Location = new System.Drawing.Point(38, 59);
+            this.malz_Ekle_Kategori.Name = "malz_Ekle_Kategori";
+            this.malz_Ekle_Kategori.Size = new System.Drawing.Size(140, 22);
+            this.malz_Ekle_Kategori.TabIndex = 1;
             // 
             // malz_adi
             // 
@@ -65,12 +65,12 @@
             this.malz_adi.TabIndex = 2;
             this.malz_adi.Text = "Adı";
             // 
-            // textBox2
+            // malz_Ekle_ismi
             // 
-            this.textBox2.Location = new System.Drawing.Point(38, 137);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(140, 22);
-            this.textBox2.TabIndex = 3;
+            this.malz_Ekle_ismi.Location = new System.Drawing.Point(38, 137);
+            this.malz_Ekle_ismi.Name = "malz_Ekle_ismi";
+            this.malz_Ekle_ismi.Size = new System.Drawing.Size(140, 22);
+            this.malz_Ekle_ismi.TabIndex = 3;
             // 
             // malz_adet
             // 
@@ -81,20 +81,20 @@
             this.malz_adet.TabIndex = 4;
             this.malz_adet.Text = "Adet";
             // 
-            // textBox3
+            // malz_Ekle_Adet
             // 
-            this.textBox3.Location = new System.Drawing.Point(38, 224);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(140, 22);
-            this.textBox3.TabIndex = 5;
+            this.malz_Ekle_Adet.Location = new System.Drawing.Point(38, 224);
+            this.malz_Ekle_Adet.Name = "malz_Ekle_Adet";
+            this.malz_Ekle_Adet.Size = new System.Drawing.Size(140, 22);
+            this.malz_Ekle_Adet.TabIndex = 5;
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.textBox2);
-            this.groupBox1.Controls.Add(this.textBox3);
+            this.groupBox1.Controls.Add(this.malz_Ekle_ismi);
+            this.groupBox1.Controls.Add(this.malz_Ekle_Adet);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.malz_adet);
-            this.groupBox1.Controls.Add(this.kategori);
+            this.groupBox1.Controls.Add(this.malz_Ekle_Kategori);
             this.groupBox1.Controls.Add(this.malz_adi);
             this.groupBox1.Location = new System.Drawing.Point(149, 36);
             this.groupBox1.Name = "groupBox1";
@@ -141,11 +141,11 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox kategori;
+        private System.Windows.Forms.TextBox malz_Ekle_Kategori;
         private System.Windows.Forms.Label malz_adi;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox malz_Ekle_ismi;
         private System.Windows.Forms.Label malz_adet;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox malz_Ekle_Adet;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button e_ekle;
         private System.Windows.Forms.Button ekle_vazgec;

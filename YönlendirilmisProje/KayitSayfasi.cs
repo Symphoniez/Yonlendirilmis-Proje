@@ -45,11 +45,11 @@ namespace YönlendirilmisProje
             //Kullanıcı adı şifre uygunluk ve eşleşme kontrolu
             if (kullaniciAdi.Length < 6 && kullaniciAdi == "")
             {
-                System.Windows.Forms.MessageBox.Show("Kullanıcı adı 6 harften kısa olamaz veya boş bırakılamaz");
+               MessageBox.Show("Kullanıcı adı 6 harften kısa olamaz veya boş bırakılamaz");
             }
             else if (sifre != sifreTk)
             {
-                System.Windows.Forms.MessageBox.Show("Sifreler eşleşmiyor");
+                MessageBox.Show("Sifreler eşleşmiyor");
             }
             else
             {
