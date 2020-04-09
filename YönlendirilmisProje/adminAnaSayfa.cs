@@ -22,5 +22,12 @@ namespace YönlendirilmisProje
             malz_ekle ekle = new malz_ekle();
             ekle.ShowDialog();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            malzemeler malz = new malzemeler();
+            malz.ShowDialog();
+            this.Hide();
+        }
     }
 }
