@@ -29,6 +29,7 @@ namespace YönlendirilmisProje
             string  kategori= malz_Ekle_Kategori.Text;
             string adi = malz_Ekle_ismi.Text;
             string  adet= malz_Ekle_Adet.Text;
+            string aciklama = aciklamaT.Text;
             DateTime eklenmeTarih = DateTime.Now;
 
 
@@ -37,12 +38,13 @@ namespace YönlendirilmisProje
                  string yol = "Data Source=verit.s3db;Version=3;";
                 SQLiteConnection baglanti = new SQLiteConnection(yol);
                 baglanti.Open();
-                string sql = "insert into malzemeler(kategori,malz_adi,Adet,tarih) values(@kategori,@malz_adi,@adet,@tarih)";
+                string sql = "insert into malzemeler(kategori,malz_adi,Adet,Aciklama,tarih) values(@kategori,@malz_adi,@adet,@aciklama,@tarih)";
                 SQLiteCommand komut = new SQLiteCommand(sql, baglanti);
 
                 komut.Parameters.AddWithValue("@kategori", kategori);
                 komut.Parameters.AddWithValue("@malz_adi", adi);
                 komut.Parameters.AddWithValue("@adet", adet);
+                komut.Parameters.AddWithValue("@aciklama", aciklama);
                 komut.Parameters.AddWithValue("@tarih", eklenmeTarih);
                 komut.ExecuteNonQuery();
                 MessageBox.Show("Ekleme işleminiz başarıyla tamamlandı");

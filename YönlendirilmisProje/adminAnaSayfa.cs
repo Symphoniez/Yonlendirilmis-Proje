@@ -29,5 +29,10 @@ namespace YönlendirilmisProje
             malz.ShowDialog();
             this.Hide();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
