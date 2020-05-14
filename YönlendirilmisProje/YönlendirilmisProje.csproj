@@ -95,6 +95,12 @@
     <Compile Include="malzemeler.Designer.cs">
       <DependentUpon>malzemeler.cs</DependentUpon>
     </Compile>
+    <Compile Include="malz_cikar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="malz_cikar.Designer.cs">
+      <DependentUpon>malz_cikar.cs</DependentUpon>
+    </Compile>
     <Compile Include="malz_ekle.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -117,6 +123,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="malzemeler.resx">
       <DependentUpon>malzemeler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="malz_cikar.resx">
+      <DependentUpon>malz_cikar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="malz_ekle.resx">
       <DependentUpon>malz_ekle.cs</DependentUpon>

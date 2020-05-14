@@ -13,6 +13,7 @@ namespace YönlendirilmisProje
 {
     public partial class malzemeler : Form
     {
+        public String kullanici;
         public malzemeler()
         { 
             InitializeComponent();
@@ -22,7 +23,7 @@ namespace YönlendirilmisProje
 
         private void malzemeler_Load(object sender, EventArgs e)
         {
-        
+            label1.Text = kullanici;
 
            
    
@@ -47,6 +48,14 @@ namespace YönlendirilmisProje
             });
                 }
             }
+           
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            adminAnaSayfa adminA = new adminAnaSayfa();
+            adminA.ShowDialog();
            
         }
     }

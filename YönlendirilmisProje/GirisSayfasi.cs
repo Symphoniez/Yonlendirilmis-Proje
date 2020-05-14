@@ -11,9 +11,11 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace YönlendirilmisProje
-{
+{   
+    
     public partial class GirisSayfasi : Form
     {
+        public String GirisYapan;
         public GirisSayfasi()   
         {
             InitializeComponent();
@@ -66,16 +68,22 @@ namespace YönlendirilmisProje
                         //kullanici adı doğruluk kontrolu
                         if (item[4] is true)
                         {
-                            //admin anasayfa yönlendirme
+                        //admin anasayfa yönlendirme
+                            GirisYapan = kullaniciAdi;
                             this.Hide();
                             adminAnaSayfa f3 = new adminAnaSayfa();
+                            f3.kullaniciAdi = GirisYapan;
                             f3.ShowDialog();
                             break;
                         }
                         else
                         {
+                            GirisYapan = kullaniciAdi;
+                       
+                        MessageBox.Show(GirisYapan);
                             this.Hide();
                             Anasayfacs f4 = new Anasayfacs();
+                            f4.yazi=GirisYapan;
                             f4.ShowDialog();
                             break;
                         }
