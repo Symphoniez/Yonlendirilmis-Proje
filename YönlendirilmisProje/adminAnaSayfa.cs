@@ -38,7 +38,10 @@ namespace YönlendirilmisProje
 
         private void button3_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            malz_düzen düzen = new malz_düzen();
+            düzen.kullanici = kullaniciAdi;
+            düzen.ShowDialog();
         }
 
         private void button4_Click(object sender, EventArgs e)
